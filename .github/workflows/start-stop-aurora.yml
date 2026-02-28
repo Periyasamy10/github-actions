@@ -16,6 +16,10 @@ on:
         type: string
         default: "us-east-1"
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   aurora-start-stop:
     uses: Periyasamy10/github-actions-common-workflows/.github/workflows/aurora-start-stop.yml@main
