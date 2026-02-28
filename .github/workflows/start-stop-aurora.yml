@@ -8,6 +8,8 @@ on:
         options:
           - start
           - stop
+          - single-az-failure
+          - two-az-failure
         required: true
       cluster_name:
         type: string
