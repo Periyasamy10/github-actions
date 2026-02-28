@@ -1,4 +1,4 @@
-name: start-stop-aurora
+name: Aurora-failover
 
 on:
   workflow_dispatch:
