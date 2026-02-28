@@ -1,4 +1,0 @@
-name: start-stop-aurora
-
-on:
-  workflow_dispatch:

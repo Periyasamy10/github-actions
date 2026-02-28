@@ -1,0 +1,26 @@
+name: start-stop-aurora
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        type: choice
+        options:
+          - start
+          - stop
+        required: true
+      cluster_name:
+        type: string
+        default: "demo"
+      aws_region:
+        type: string
+        default: "us-east-1"
+
+jobs:
+  aurora-start-stop:
+    uses: Periyasamy10/github-actions-common-workflows/.github/workflows/aurora-start-stop.yml@main
+    with:
+      action: ${{ github.event.inputs.action }}
+      cluster_name: ${{ github.event.inputs.cluster_name }}
+      aws_region: ${{ github.event.inputs.aws_region }}
+    secrets: inherit
