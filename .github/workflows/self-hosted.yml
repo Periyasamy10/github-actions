@@ -22,3 +22,9 @@ jobs:
          
       - name: whoami
         run: whoami
+      
+      - name: create file
+        run: touch demo.txt
+     
+      - name: append contents
+        run: echo "Hi This is from workflow" >> demo.txt
