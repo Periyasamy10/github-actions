@@ -12,6 +12,7 @@ jobs:
     runs-on: 
       - terraform
       - demo
+      - dummy
     
     steps:
       - name: check current path
