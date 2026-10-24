@@ -1,0 +1,4 @@
+FROM ubuntu:22.04
+ARG GITHUB_RUNNER_VERSION=...
+ENV DEBIAN_FRONTEND=noninteractive
+

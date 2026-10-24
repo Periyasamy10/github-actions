@@ -1,0 +1,24 @@
+name: Self-hosted demo
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  Demo-job:
+    runs-on: 
+      - terraform
+      - demo
+    
+    steps:
+      - name: check current path
+        run: pwd
+
+      - name: hostname
+        run: hostname
+         
+      - name: whoami
+        run: whoami
